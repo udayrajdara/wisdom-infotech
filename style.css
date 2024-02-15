@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+.flex{
+    display: flex;
+
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.space-around{
+    justify-content: space-around;
+}
+.space-between{
+    justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+}
+.a-center{
+    align-items: center;
+}
+.a-content-center{
+    align-content: center;
+}
+
+.blue{
+    color: #1778B0;
+
+
+}
+
+
+.container{
+    width: 100%;
+}
+.navbar{
+    width: 100%;
+    background-color: rgba(244, 72, 72, 0.842);
+    padding: 0 20px;
+}
+
+.left-bar img{
+    width: 200px;
+}
+.right-bar{
+    width: 660px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.enquire-now button{
+    border: none;
+    outline: none;
+    background-color: white;
+    color: rgba(244, 72, 72, 0.842);
+    width: 90px;
+    padding: 6px 0;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 600;
+}
+a img{
+    width: 70px;
+    height: 70px;
+}
+
+@media (max-width: 800px) {
+    .container{
+        width: 100%;
+    }
+    .navbar{
+        width: 100%;
+        background-color: rgba(244, 72, 72, 0.842);
+        padding: 0 20px;
+    }
+}
+
+
+
+.head-section{
+    width: 100%;
+    height: 500px;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./backgroundimage.jpg');
+}
+
+
+
+
+/* Full Stack Styling Start */
+
+.hyderabad-1{
+    width: 100%;
+    height: 50px;
+    /* background-color: #1778B0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.project-based-section{
+    width: 100%;
+    height: auto;
+    padding: 2.5rem 0;
+    /* background-color: #223743; */
+}
+.full-stack-details{
+    text-align: center;
+    padding-bottom: 1rem;
+    /* color: white; */
+    font-family: "Poppins", sans-serif;
+}
+
+.built-sites span{
+    width: auto;
+    padding: 5px 10px;
+    height: auto;
+    /* color: #E1362F; */
+    /* background-color: white; */
+    border-radius: 3px;
+    text-align: center;
+}
+.built-sites{
+    display: flex;
+    justify-content: center;
+}
+.jobs-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.jobs-image img{
+    padding-top: 1rem;
+    width: 1000px;
+}
+
+.company-title{
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+
+}
+  
+  
+  .row {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* padding: 10px; */
+    font-size: 25px;
+    color: #1778B0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  
+  
+  .first {
+   flex: 1 1 15rem;
+   text-align: center;
+  }
+  
+  .lig span{
+    font-size: 40px;
+    text-align: center;
+    color: #1778B0;
+    font-weight: 600;
+  }
+  
+  .text-ligh{
+    color: #54595f;
+    font-size: 20px;
+    font-weight: 550;
+    text-align: center;
+  }
+
+.list1 i, .list2 i{
+    color: #1778B0;
+}
+
+
+.interviews-title{
+    color: #1778B0;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.batch-details{
+    width: 350px;
+    height: 300px;
+    border-radius: 3px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.batch-details-aws{
+    width: 350px;
+    height: 200px;
+    border-radius: 3px;
+    font-family: "Poppins", sans-serif;
+}
+
+.highlights-title{
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+.grid{
+    gap: 5px;
+}
+
+.grid-child{
+    border-radius: 3px;
+
+}
+
+.advantages-title{
+    text-decoration: underline;
+}
+
+.images img{
+    width: 75%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode:darken;
+}
+
+  @media (max-width: 1000px) {
+    .jobs-image{
+        width: 100%;
+    }
+    .jobs-image img{
+        width: 100%;
+        padding: 1rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .batch-details{
+        width: 350px;
+        height: auto;
+        border-radius: 3px;
+        font-family: "Poppins", sans-serif;
+    
+    }
+    .batch-details-aws{
+        width: 350px;
+        height: auto;
+        border-radius: 3px;
+        font-family: "Poppins", sans-serif;
+    }
+  }
+
+
+  @media (max-width: 500px) {
+    .images img{
+        width: 100%;
+    }
+  }
