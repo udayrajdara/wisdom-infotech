@@ -273,10 +273,23 @@ a img{
     .images img{
         width: 100%;
     }
+    td, th{
+        font-size: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .planning-text{
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
   }
 
   @media (max-width: 300px) {
     .list-group{
         width: 100%;
     }
+  }
+
+  td, th{
+    width: 300px;
   }
