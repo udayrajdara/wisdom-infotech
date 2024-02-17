@@ -324,3 +324,22 @@ a img{
     width: 500px;
     padding: 2.5rem;
   }
+  
+  .active{
+    color: #2F3974 !important;
+  }
+
+  .text-wisdom{
+    color: #2F3974;
+  }
+  .text-wisdom-50{
+    color: #2f397482;
+  }
+
+  .bg-wisdom{
+    background-color: #2F3974;
+  }
+
+  .bg-wisdom-50{
+    background-color: #2f397482;
+  }
