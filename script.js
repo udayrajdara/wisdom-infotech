@@ -42,3 +42,95 @@ const load = () => {
    animate(text4, 0, 8, 7000);
 
 }
+
+
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxwwHxK-_15eqdyk6kz5MJs6LzaDCaTqVfWdVnWJmmFROsOwMOmgLdzpjOUqYsp26y7-A/exec';
+const form = document.forms['submit-to-google-sheet'];
+var msg = document.getElementById('msg');
+
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      var emailInpt = document.forms["submit-to-google-sheet"]["email"].value;
+      var nameInpt = document.forms["submit-to-google-sheet"]["name"].value;
+      var phoneInpt = document.forms["submit-to-google-sheet"]["phone"].value;
+      var selectInpt = document.forms["submit-to-google-sheet"]["course"].value;
+      var nameText = document.getElementById('name-form-text');
+      var emailText = document.getElementById('form-email-text');
+      var phoneText = document.getElementById('phone-form-text');
+      var selectText = document.getElementById('select-text');
+      var nameinput = document.getElementById('name-inpt');
+      var emailinput = document.getElementById('email-inpt');
+      var phoneinput = document.getElementById('phone-inpt');
+
+
+
+   if(nameInpt === null || nameInpt == ''){
+      nameText.innerHTML = "Please enter your name";
+      nameinput.className = "rounded-1 border-2 border-danger ps-2 p-1 form-inpt w-100";
+      emailText.innerHTML = "";
+      emailinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      phoneText.innerHTML = "";
+      phoneinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      return false
+
+   }else if(emailInpt == '' || emailInpt === null){
+      emailText.innerHTML = "Email should'nt be empty";
+      emailinput.className = "rounded-1 border-2 border-danger ps-2 p-1 form-inpt w-100";
+      nameText.innerHTML = "";
+      nameinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      phoneText.innerHTML = "";
+      phoneinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      return false
+
+   }else if(phoneInpt === null || phoneInpt == ''){
+      phoneText.innerHTML = "Please enter your phone number";
+      phoneinput.className = "rounded-1 border-2 border-danger ps-2 p-1 form-inpt w-100";
+      emailInpt.innerHTML = "";
+      emailinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      nameText.innerHTML = "";
+      nameinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      return false
+
+   }else if(phoneInpt.length < 10 || phoneInpt.length > 10 || isNaN(phoneInpt)) {
+      phoneText.innerHTML = "Please enter 10 digit phone number";
+      phoneinput.className = "rounded-1 border-2 border-danger ps-2 p-1 form-inpt w-100";
+      emailInpt.innerHTML = "";
+      emailinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      nameText.innerHTML = "";
+      nameinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      return false
+   }else if(selectInpt == '' || selectInpt === null) {
+      selectText.innerHTML = "Please select an option";
+      return false
+
+   } else{
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      msg.innerHTML = "Thank you for your response";
+
+      setTimeout(function(){
+         msg.innerHTML = "";
+         nameText.innerHTML = "";
+         emailText.innerHTML = "";
+         phoneText.innerHTML = "";
+         selectText.innerHTML = "";
+         emailinput.className ="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100"
+         form.reset();
+      }, 1000);
+
+   })
+   .catch(error => console.error('Error!', error.message))
+
+   }
+   return true
+
+    
+})
+
+

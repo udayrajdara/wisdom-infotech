@@ -282,15 +282,40 @@ a img{
         overflow-x: scroll;
         scroll-behavior: smooth;
     }
+    .form-container{
+        width: 100%;
+        padding: 0;
+      }
+      .form-inpt{
+        padding: 1px;
+      }
   }
 
   @media (max-width: 300px) {
     .list-group{
         width: 100%;
     }
+    .form-container{
+        width: 100%;
+        padding: 1rem;
+        font-size: 12px;
+      }
+      .form-container form select optgroup option{
+        font-size: 12px;
+
+      }
+      .form-inpt{
+        padding: 0;
+      }
+
   }
 
   td, th{
     width: 300px;
     text-align: center;
+  }
+
+  .form-container{
+    width: 500px;
+    padding: 2.5rem;
   }
