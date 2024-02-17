@@ -90,20 +90,21 @@ form.addEventListener('submit', e => {
    }else if(phoneInpt === null || phoneInpt == ''){
       phoneText.innerHTML = "Please enter your phone number";
       phoneinput.className = "rounded-1 border-2 border-danger ps-2 p-1 form-inpt w-100";
-      emailInpt.innerHTML = "";
-      emailinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
       nameText.innerHTML = "";
       nameinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      emailInpt.innerHTML = "";
+      emailinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
       return false
 
    }else if(phoneInpt.length < 10 || phoneInpt.length > 10 || isNaN(phoneInpt)) {
       phoneText.innerHTML = "Please enter 10 digit phone number";
       phoneinput.className = "rounded-1 border-2 border-danger ps-2 p-1 form-inpt w-100";
-      emailInpt.innerHTML = "";
-      emailinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
       nameText.innerHTML = "";
       nameinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      emailInpt.innerHTML = "";
+      emailinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
       return false
+      
    }else if(selectInpt == '' || selectInpt === null) {
       selectText.innerHTML = "Please select an option";
       return false
