@@ -379,7 +379,10 @@ a img{
       }
 
       .fs-text-3{
-        font-size: 18px !important;
+        font-size: 20px !important;
+      }
+      .fs-text-5{
+        font-size: 25px !important;
       }
       .fs-text-4{
         font-size: 16px !important;
@@ -428,6 +431,9 @@ a img{
     .wisdom-caption{
         font-size: 0.8rem;
     }
+    .fs-text-4{
+        font-size: 15px !important;
+      }
 
   }
 
@@ -485,10 +491,12 @@ a img{
 
 .bg-blue:hover{
     background-color: #1778B0;
-
-
 }
 
+
+.padding-s{
+    padding-left: 10%;
+}
   .row{
     gap: 5px;
   }
