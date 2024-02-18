@@ -505,4 +505,6 @@ a img{
     width: 60px;
   }
 
-  
+  .border-wisdom{
+    border: 1px solid #2F3974;
+  }
