@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-
 }
 
 
@@ -30,11 +29,6 @@
     align-content: center;
 }
 
-.blue{
-    color: #1778B0;
-
-
-}
 
 
 .container{
@@ -236,7 +230,7 @@ a img{
 }
 
 .images img{
-    width: 45%;
+    width: 45% !important;
     aspect-ratio: 3/2;
     object-fit: contain;
     mix-blend-mode:darken;
@@ -379,6 +373,17 @@ a img{
     .wisdom-caption{
         font-size: 1rem;
     }
+
+    .fs-text{
+        font-size: 13px !important;
+      }
+
+      .fs-text-3{
+        font-size: 18px !important;
+      }
+      .fs-text-4{
+        font-size: 16px !important;
+      }
   }
 
 
@@ -455,7 +460,10 @@ a img{
   .bg-wisdom{
     background-color: #2F3974;
   }
+  .bg-wisdom:hover{
+    background-color: #2F3974;
 
+  }
   .text-wisdom-white{
     background-color: #F8F8F8;
   }
@@ -464,8 +472,23 @@ a img{
     background-color: #F8F8F8;
   }
   .bg-wisdom-50{
-    background-color: #2f397482;
+    background-color: #7982b7ab;
   }
+
+  .blue{
+    color: #1778B0;
+}
+
+.bg-blue{
+    background-color: #1778B0;
+}
+
+.bg-blue:hover{
+    background-color: #1778B0;
+
+
+}
+
   .row{
     gap: 5px;
   }
@@ -473,3 +496,5 @@ a img{
   .col img{
     width: 60px;
   }
+
+  
