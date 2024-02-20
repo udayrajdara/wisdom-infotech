@@ -78,7 +78,7 @@ form.addEventListener('submit', e => {
       phoneinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
       return false
 
-   }else if(emailInpt == '' || emailInpt === null){
+   }else if(emailInpt === null || emailInpt == ''){
       emailText.innerHTML = "Email should'nt be empty";
       emailinput.className = "rounded-1 border-2 border-danger ps-2 p-1 form-inpt w-100";
       nameText.innerHTML = "";
@@ -87,7 +87,16 @@ form.addEventListener('submit', e => {
       phoneinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
       return false
 
-   }else if(phoneInpt === null || phoneInpt == ''){
+   }else if(!emailRegex.test(emailInpt)) {
+      emailText.innerHTML = "Enter a valid email address";
+      emailinput.className = "rounded-1 border-2 border-danger ps-2 p-1 form-inpt w-100";
+      nameText.innerHTML = "";
+      nameinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      phoneText.innerHTML = "";
+      phoneinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      return false
+
+   } else if(phoneInpt === null || phoneInpt == ''){
       phoneText.innerHTML = "Please enter your phone number";
       phoneinput.className = "rounded-1 border-2 border-danger ps-2 p-1 form-inpt w-100";
       nameText.innerHTML = "";

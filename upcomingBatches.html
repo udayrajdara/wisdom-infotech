@@ -17,6 +17,56 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
   <script src="https://kit.fontawesome.com/fc2f6bf1f9.js" crossorigin="anonymous"></script>
+
+  <style>
+    .fstrow, .sstrow, .tstrow,.frstrow{
+      display: block;
+      align-items: center;
+      align-content: center;
+      gap: 10px;
+      padding: 6px;
+      height: 60px;
+
+    }
+
+    .tstrow:nth-child(2){
+      background-color: #E9ECEF;
+    }
+
+    .fstrow:nth-child(2){
+      background-color: #E9ECEF;
+    }
+
+    .sstrow:nth-child(2){
+      background-color: #E9ECEF;
+    }
+
+    .frstrow:nth-child(2){
+      background-color: #E9ECEF;
+    }
+
+    .table-data1{
+      font-size: 18px;
+      padding: 5px;
+    }
+    .table-data2{
+      font-size: 18px;
+      padding: 6px;
+
+    }
+    .table-data3{
+      font-size: 18px;
+      padding: 6px;
+
+    }
+    .table-data4 button{
+      border: 1px solid #1778B0;
+      padding: 5px;
+      color: black;
+      background-color: transparent;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
     
@@ -64,29 +114,18 @@
             <th class="bg-body-secondary">Duration</th>
             <th class="bg-body-secondary">Register</th>
           </tr>
-          <tr class="border">
-            <td>Full Stack Development - PYTHON</td>
-            <td class="text-center">23rd March</td>
-            <td>4 Months</td>
-            <td><button class="btn text-primary">Register Now</button></td>
+          <!-- <tr class="border" id="tbody1">
+
           </tr>
-          <tr class="border">
-            <td class="bg-body-secondary">Full Stack Development - JAVA</td>
-            <td class="bg-body-secondary">8th March</td>
-            <td class="bg-body-secondary">4 Months</td>
-            <td class="bg-body-secondary"><button class="btn text-primary">Register Now</button></td>
-          </tr>
-          <tr class="border">
-            <td>Digital Marketing</td>
-            <td>23rd March</td>
-            <td>4 Months</td>
-            <td><button class="btn text-primary">Register Now</button></td>
-          </tr>
-          <tr>
-            <td class="bg-body-secondary">AWS + DevOps</td>
-            <td class="bg-body-secondary">12th March</td>
-            <td class="bg-body-secondary">4 Months</td>
-            <td class="bg-body-secondary"><button class="btn text-primary">Register Now</button></td>
+          <tr class="border" id="tbod2">
+
+          </tr> -->
+          <tr class="border" >
+            <td class="" id="tbody1"></td>
+            <td class="" id="tbody2"></td>
+            <td class="" id="tbody3"></td>
+            <td class="" id="tbody4"></td>
+            
           </tr>
         </table>
       </div>
@@ -126,7 +165,220 @@
 
 
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+      
+      <script type="module">
+    
+        import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
+        import {getDatabase, ref, set, get, child,} from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js';
+        
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyBBYb_gqRsaf9fOnz3D4v4zrvZhdW78LwU",
+            authDomain: "wisdom-infotech.firebaseapp.com",
+            databaseURL: "https://wisdom-infotech-default-rtdb.firebaseio.com",
+            projectId: "wisdom-infotech",
+            storageBucket: "wisdom-infotech.appspot.com",
+            messagingSenderId: "638754480034",
+            appId: "1:638754480034:web:d1d8327efc7ebddd0e9cfb"
+          };
+        
+          const app = initializeApp(firebaseConfig);
+        
+        
+          const database = getDatabase(app)
+        
+        
+        
+          // let nameLi = document.getElementById('course-name-li');
+          // let startLi = document.getElementById('start-date-li');
+          // let durationLi = document.getElementById('duration-li');
+        
+        
+
+        
+          // window.addEventListener('load', function(){
+        
+            // var usRef = ref(database, 'index/');
+
+        
+            // get(usRef).then((snapshot)=>{
+                
+                // snapshot.forEach((childsnapshot)=>{
+        
+          //           var retriveData = (childsnapshot.val())
+          //           console.log(retriveData);
+        
+          //           nameLi.innerHTML = retriveData.courseName;
+          //           startLi.innerHTML = retriveData.data;
+          //           durationLi.innerHTML = retriveData.time
+                    
+        
+        
+          //       })
+          //   })
+        
+            
+          // })
+
+
+          var listNo =0;
+          // var tbody1 = document.getElementById('tbody1');
+          // var tbody2 = document.getElementById('tbody2');
+          // var tbody3 = document.getElementById('tbody3');
+
+
+
+          function addItemsToTable(courseName, data, time){
+
+            let trow1 = document.createElement('tr1')
+            let trow2 = document.createElement('tr2')
+            let trow3 = document.createElement('tr3')
+            let trow4 = document.createElement('tr3')
+
+
+            trow1.className = "fstrow";
+            trow2.className = "sstrow";
+            trow3.className = "tstrow";
+            trow4.className = "frstrow";
+
+
+
+
+
+            let td1 = document.createElement('td1')
+            let td2 = document.createElement('td2')
+            let td3 = document.createElement('td3')
+            let td4 = document.createElement('td4')
+
+            td1.classList = 'table-data1';
+            td2.classList = 'table-data2';
+            td3.classList = 'table-data3';
+            td4.classList = 'table-data4';
+
+
+
+
+            td1.innerHTML = courseName;
+            td2.innerHTML = time;
+            td3.innerHTML = data;
+            td4.innerHTML = '<button>Register</button>';
+
+
+
+            trow1.appendChild(td1);
+            trow2.appendChild(td2);
+            trow3.appendChild(td3);
+            trow4.appendChild(td4);
+            // trow5.appendChild(td5);
+
+
+            tbody1.appendChild(trow1);
+            tbody2.appendChild(trow2);
+            tbody3.appendChild(trow3);
+            tbody4.appendChild(trow4);
+
+
+
+
+
+
+            
+          }
+
+          function addAllItemsToTable(theList){
+            var liNo =0;
+            // tbody.innerHTML = "";
+            theList.forEach(index => {
+              addItemsToTable(index.courseName, index.data, index.time);
+            });
+          }
+
+
+
+          function getAllData(){
+              var usRef = ref(database, 'index');
+
+              get(usRef).then((snapshot)=>{
+
+              var listData = [];
+
+              snapshot.forEach((childsnapshot)=>{
+
+              listData.push(childsnapshot.val())
+              });
+
+              addAllItemsToTable(listData);
+
+              });
+          }
+
+
+          function getAllRealTime(){
+              var usRef = ref(database, 'index');
+
+              onValue(usRef, (snapshot)=> {
+                
+                var listData = [];
+
+              snapshot.forEach((childsnapshot)=>{
+              listData.push(childsnapshot.val())
+              });
+
+              addAllItemsToTable(listData);
+              })
+
+              
+          }
+
+          window.onload = getAllData;
+
+
+
+
+
+          // window.addEventListener('load', function getData(){
+        
+          //   var usRef = ref(database, 'index/');
+
+          //   get(usRef).then((snapshot)=>{
+
+          //     var list = []
+
+          //     snapshot.forEach((childsnapshot)=>{
+          //       list.push(childsnapshot.key, childsnapshot.val())
+                
+          //     })
+
+          //     addList(list)
+
+          //   })
+
+
+          
+
+          //   })
+                
+    
+            // function addList(theList){
+            //   listNo = 0;
+
+            //   nameLi.innerHTML = "";
+            //   theList.forEach(element =>{
+            //     addList
+            //   })
+              
+            // }
+    
+          
+      
+    
+        
+      
+        
+      
+        
+        </script>
 
 </body>
 </html>
