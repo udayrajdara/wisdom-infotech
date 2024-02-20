@@ -19,53 +19,7 @@
   <script src="https://kit.fontawesome.com/fc2f6bf1f9.js" crossorigin="anonymous"></script>
 
   <style>
-    .fstrow, .sstrow, .tstrow,.frstrow{
-      display: block;
-      align-items: center;
-      align-content: center;
-      gap: 10px;
-      padding: 6px;
-      height: 60px;
-
-    }
-
-    .tstrow:nth-child(2){
-      background-color: #E9ECEF;
-    }
-
-    .fstrow:nth-child(2){
-      background-color: #E9ECEF;
-    }
-
-    .sstrow:nth-child(2){
-      background-color: #E9ECEF;
-    }
-
-    .frstrow:nth-child(2){
-      background-color: #E9ECEF;
-    }
-
-    .table-data1{
-      font-size: 18px;
-      padding: 5px;
-    }
-    .table-data2{
-      font-size: 18px;
-      padding: 6px;
-
-    }
-    .table-data3{
-      font-size: 18px;
-      padding: 6px;
-
-    }
-    .table-data4 button{
-      border: 1px solid #1778B0;
-      padding: 5px;
-      color: black;
-      background-color: transparent;
-      font-size: 14px;
-    }
+    
   </style>
 </head>
 <body>
@@ -114,17 +68,11 @@
             <th class="bg-body-secondary">Duration</th>
             <th class="bg-body-secondary">Register</th>
           </tr>
-          <!-- <tr class="border" id="tbody1">
-
-          </tr>
-          <tr class="border" id="tbod2">
-
-          </tr> -->
           <tr class="border" >
-            <td class="" id="tbody1"></td>
-            <td class="" id="tbody2"></td>
-            <td class="" id="tbody3"></td>
-            <td class="" id="tbody4"></td>
+            <td  class="tbody" id="tbody1"></td>
+            <td  class="tbody" id="tbody2"></td>
+            <td  class="tbody" id="tbody3"></td>
+            <td  class="tbody" id="tbody4"></td>
             
           </tr>
         </table>
@@ -231,10 +179,10 @@
 
           function addItemsToTable(courseName, data, time){
 
-            let trow1 = document.createElement('tr1')
-            let trow2 = document.createElement('tr2')
-            let trow3 = document.createElement('tr3')
-            let trow4 = document.createElement('tr3')
+            let trow1 = document.createElement('tr')
+            let trow2 = document.createElement('tr')
+            let trow3 = document.createElement('tr')
+            let trow4 = document.createElement('tr')
 
 
             trow1.className = "fstrow";
@@ -246,10 +194,10 @@
 
 
 
-            let td1 = document.createElement('td1')
-            let td2 = document.createElement('td2')
-            let td3 = document.createElement('td3')
-            let td4 = document.createElement('td4')
+            let td1 = document.createElement('td')
+            let td2 = document.createElement('td')
+            let td3 = document.createElement('td')
+            let td4 = document.createElement('td')
 
             td1.classList = 'table-data1';
             td2.classList = 'table-data2';

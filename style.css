@@ -520,3 +520,145 @@ a img{
   /* .col input::placeholder{
     color: white;
   } */
+
+
+
+  .fstrow, .sstrow, .tstrow,.frstrow{
+    display: block;
+    padding: 0px;
+    aspect-ratio: 4/1;
+  }
+
+  /* .tbody:nth-child(odd){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+  } */
+  /* tr:nth-child(odd){
+    background-color: #E9ECEF;
+
+
+  } */
+
+    /* .tstrow:nth-child(even){
+        background-color: #E9ECEF;
+    border: 1px solid black;
+
+    }
+
+    .fstrow:nth-child(even){
+        background-color: #E9ECEF;
+
+    }
+
+    .sstrow:nth-child(2){
+        background-color: #E9ECEF;
+    }
+
+    .frstrow:nth-child(2){
+        background-color: #E9ECEF;
+    } */
+
+  .table-data1{
+    font-size: 17px;
+    padding: 5px;
+  }
+  .table-data2{
+    font-size: 17px;
+    padding: 6px;
+
+
+  }
+  .table-data3{
+    font-size: 17px;
+    padding: 6px;
+
+  }
+  .table-data4{
+    font-size: 17px;
+    padding: 6px;
+
+  }
+  .table-data4 button{
+    border: none;
+    width: 120px;
+    padding: 5px;
+    color: black;
+    background-color: transparent;
+    font-size: 14px;
+    color: #1778B0;
+    font-weight: 600;
+  }
+
+  .table-data4 button:hover{
+    color: #404040;
+
+  }
+
+
+  @media (max-width:500px) {
+    .fstrow, .sstrow, .tstrow,.frstrow{
+        display: block;
+        gap: 0px;
+        padding: 5px 0;
+    
+      }
+
+      .table-data1{
+        font-size: 13px;
+        padding: 5px;
+      }
+      .table-data2{
+        font-size: 13px;
+        padding: 5px;
+    
+    
+      }
+      .table-data3{
+        font-size: 13px;
+        padding: 5px;
+    
+      }
+      .table-data4{
+        font-size: 13px;
+        padding: 5px;
+    
+      }
+
+      /* .table-data4 button{
+        width: 100%;
+      } */
+  }
+
+
+  @media (max-width:900px) {
+    .fstrow, .sstrow, .tstrow,.frstrow{
+        display: block;
+        gap: 0px;
+        padding: 5px 0;
+    
+      }
+
+      .table-data1{
+        font-size: 15px;
+        padding: 5px;
+      }
+      .table-data2{
+        font-size: 15px;
+        padding: 5px;
+    
+    
+      }
+      .table-data3{
+        font-size: 15px;
+        padding: 5px;
+    
+      }
+      .table-data4{
+        font-size: 15px;
+        padding: 5px;
+    
+      }
+  }

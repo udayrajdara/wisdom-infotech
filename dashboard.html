@@ -25,21 +25,21 @@
             <div class="col pt-4 pb-5 ps-5">
                 <div class="col">
                     <label for="index-number" duration class="fs-6 fw-medium text-dark">Index Number</label><br>
-                    <input type="number" name="index-number" step="1" id="index-number" class="fs-6 w-75 rounded-0 border-2 text-dark border-dark border">
+                    <input type="number" name="index-number" step="1" id="index-number" class="fs-6 rounded-0 border-2 text-dark border-dark border">
                 </div>
                 <div class="col">
                     <label for="course-name" class="fs-6 fw-medium text-dark">Course</label><br>
-                    <input type="text" name="course" id="course-name" class="fs-6 w-75 rounded-0 border-2 text-dark border-dark border">
+                    <input type="text" name="course" id="course-name" class="fs-6 rounded-0 border-2 text-dark border-dark border">
                 </div>
                 <div class="col">
                     <label for="startdate" class="fs-6 fw-medium text-dark">Start Date</label><br>
-                    <input type="text" name="startdate" id="start-date" class="fs-6 w-75 rounded-0 border-2 text-dark border-dark border">
+                    <input type="text" name="startdate" id="start-date" class="fs-6 rounded-0 border-2 text-dark border-dark border">
                 </div>
                 <div class="col mb-4">
                     <label for="duration" duration class="fs-6 fw-medium text-dark">Duration</label><br>
-                    <input type="text" name="duration" id="duration" class="fs-6 w-75 rounded-0 border-2 text-dark border-dark border outline">
+                    <input type="text" name="duration" id="duration" class="fs-6 rounded-0 border-2 text-dark border-dark border outline">
                 </div>
-                <div class="col">
+                <div class="col flex gap-2">
                     <button type="submit" class="btn bg-wisdom mt-3 fs-6 text-white ps-2 pe-2" id="addBtn">Add</button>
                     <button type="submit" class="btn bg-wisdom mt-3 fs-6 text-white ps-2 pe-2" id="remBtn">Remove</button>
                     <button type="submit" class="btn bg-wisdom mt-3 fs-6 text-white ps-2 pe-2" id="updBtn">Update</button>
@@ -47,14 +47,33 @@
                 </div>
             </div>
             <div class="col mt-4">
-                <div class="fs-5 fw-semibold text-wisdom">Course: <span class="ms-3 fs-5 text-dark fw-normal" id="course-name-li"></span></div>
+                
+                <!-- <div class="fs-5 fw-semibold text-wisdom">Course: <span class="ms-3 fs-5 text-dark fw-normal" id="course-name-li"></span></div>
                 <div class="fs-5 fw-semibold text-wisdom">Start Date: <span class="ms-3 fs-5 text-dark fw-normal" id="start-date-li"></span></div>
-                <div class="fs-5 fw-semibold text-wisdom">Duration: <span class="ms-3 fs-5 text-dark fw-normal" id="duration-li"></span></div>
+                <div class="fs-5 fw-semibold text-wisdom">Duration: <span class="ms-3 fs-5 text-dark fw-normal" id="duration-li"></span></div> -->
             </div>
             
         </div>
 
         
+    </div>
+
+    <div class="container">
+        <table class="border">
+            <tr class="border">
+              <th class="p-2 fs-6 bg-body-secondary text-center ">Course</th>
+              <th class="bg-body-secondary fs-6">Start Date</th>
+              <th class="bg-body-secondary fs-6">Duration</th>
+              <th class="bg-body-secondary fs-6">Register</th>
+            </tr>
+            <tr class="border fs-6">
+              <td  class="tbody fs-6" id="tbody1"></td>
+              <td  class="tbody fs-6" id="tbody2"></td>
+              <td  class="tbody fs-6" id="tbody3"></td>
+              <td  class="tbody fs-6" id="tbody4"></td>
+              
+            </tr>
+          </table>
     </div>
 
 
@@ -108,27 +127,139 @@ const firebaseConfig = {
   })
 
 
-  window.addEventListener('load', function(){
+//   window.addEventListener('load', function(){
 
-    var usRef = ref(database, 'index');
+//     var usRef = ref(database, 'index');
 
-    get(usRef).then((snapshot)=>{
+//     get(usRef).then((snapshot)=>{
         
-        snapshot.forEach((childsnapshot)=>{
+//         snapshot.forEach((childsnapshot)=>{
 
-            var retriveData = childsnapshot.val()
-            console.log(retriveData);
+//             var retriveData = childsnapshot.val()
+//             console.log(retriveData);
 
-            nameLi.innerHTML = retriveData.courseName;
-            startLi.innerHTML = retriveData.data;
-            durationLi.innerHTML = retriveData.time
+//             nameLi.innerHTML = retriveData.courseName;
+//             startLi.innerHTML = retriveData.data;
+//             durationLi.innerHTML = retriveData.time
 
 
-        })
-    })
+//         })
+//     })
 
     
-  })
+//   })
+
+
+  var listNo =0;
+          // var tbody1 = document.getElementById('tbody1');
+          // var tbody2 = document.getElementById('tbody2');
+          // var tbody3 = document.getElementById('tbody3');
+
+
+
+          function addItemsToTable(courseName, data, time){
+
+            let trow1 = document.createElement('tr')
+            let trow2 = document.createElement('tr')
+            let trow3 = document.createElement('tr')
+            let trow4 = document.createElement('tr')
+
+
+            trow1.className = "fstrow";
+            trow2.className = "sstrow";
+            trow3.className = "tstrow";
+            trow4.className = "frstrow";
+
+
+
+
+
+            let td1 = document.createElement('td')
+            let td2 = document.createElement('td')
+            let td3 = document.createElement('td')
+            let td4 = document.createElement('td')
+
+            td1.classList = 'table-data1';
+            td2.classList = 'table-data2';
+            td3.classList = 'table-data3';
+            td4.classList = 'table-data4';
+
+
+
+
+            td1.innerHTML = courseName;
+            td2.innerHTML = time;
+            td3.innerHTML = data;
+            td4.innerHTML = '<button>Register</button>';
+
+
+
+            trow1.appendChild(td1);
+            trow2.appendChild(td2);
+            trow3.appendChild(td3);
+            trow4.appendChild(td4);
+            // trow5.appendChild(td5);
+
+
+            tbody1.appendChild(trow1);
+            tbody2.appendChild(trow2);
+            tbody3.appendChild(trow3);
+            tbody4.appendChild(trow4);
+
+
+
+
+
+
+            
+          }
+
+          function addAllItemsToTable(theList){
+            var liNo =0;
+            // tbody.innerHTML = "";
+            theList.forEach(index => {
+              addItemsToTable(index.courseName, index.data, index.time);
+            });
+          }
+
+
+
+          function getAllData(){
+              var usRef = ref(database, 'index');
+
+              get(usRef).then((snapshot)=>{
+
+              var listData = [];
+
+              snapshot.forEach((childsnapshot)=>{
+
+              listData.push(childsnapshot.val())
+              });
+
+              addAllItemsToTable(listData);
+
+              });
+          }
+
+
+          function getAllRealTime(){
+              var usRef = ref(database, 'index');
+
+              onValue(usRef, (snapshot)=> {
+                
+                var listData = [];
+
+              snapshot.forEach((childsnapshot)=>{
+              listData.push(childsnapshot.val())
+              });
+
+              addAllItemsToTable(listData);
+              })
+
+              
+          }
+
+          window.onload = getAllData;
 
 
 
