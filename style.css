@@ -385,7 +385,7 @@ a img{
         font-size: 25px !important;
       }
       .fs-text-4{
-        font-size: 16px !important;
+        font-size: 15px !important;
       }
   }
 
@@ -432,7 +432,7 @@ a img{
         font-size: 0.8rem;
     }
     .fs-text-4{
-        font-size: 15px !important;
+        font-size: 14px !important;
       }
 
   }
@@ -464,6 +464,12 @@ a img{
   }
 
   .bg-wisdom{
+    opacity: 1;
+    background-color: #2F3974;
+  }
+
+  .bg-wisdom::after{
+    opacity: 1;
     background-color: #2F3974;
   }
   .bg-wisdom:hover{
@@ -483,11 +489,17 @@ a img{
 
   .blue{
     color: #1778B0;
-}
+  }
 
   .bg-blue{
+      opacity: 1;
       background-color: #1778B0;
   }
+
+  .bg-blue::after{
+    opacity: 1;
+    background-color: #1778B0;
+}
 
 .bg-blue:hover{
     background-color: #1778B0;
@@ -678,7 +690,7 @@ a img{
 
   .active-form{
     display: inherit;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.6);
     padding: 1.2rem;
   }
 
@@ -688,6 +700,23 @@ a img{
 
   .targetElement{
     display: none;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.6);
     padding: 1.2rem;
+  }
+
+  @media (max-width:500px) {
+    .active-form{
+      width: 100%;
+      height: 100vh;
+      display: inherit;
+      background-color: rgba(0,0,0,0.6);
+      padding: 1.2rem;
+    }
+    .targetElement{
+      width: 100%;
+      height: 100vh;
+      display: none;
+      background-color: rgba(0,0,0,0.6);
+      padding: 1.2rem;
+    }
   }
