@@ -29,7 +29,7 @@
     
 
 
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <nav class="z-index z-1 navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand fw-medium" href="index.html"><img class="wisdom-logo" src="./Images/wisdom-logo.jpg" alt="WisdomInfotech"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,9 +39,6 @@
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link fs-6 fw-semibold" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-6 fw-semibold" href="about-us.html">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fs-6 fw-semibold" href="fullstack.html">Full Stack Development</a>
@@ -57,6 +54,48 @@
         </div>
       </nav>
 
+      <div id="targetElement" class="container-xxl targetElement z-index z-2 fixed-top top-50 start-50 translate-middle">
+        <div>
+        <div class="d-flex justify-content-center">
+          <div class="form-container rounded-1 shadow-sm bg-body-tertiary border-wisdom border-1">
+          <div class="text-dark p-1 text-dark text-end"><i onclick="closeForm()" id="formPopup" class="cur-pot exit-icon p-2 bg-wisdom-50 rounded-5 text-white fa-solid fa-xmark"></i></div>
+          <form name="submit-to-google-sheet">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label><br>
+              <input type="text" name="name" placeholder="Enter your name" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="name-inpt">
+              <span class="form-text text-danger" id="name-form-text"></span>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label><br>
+              <input type="email" name="email" placeholder="Enter your email" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="email-inpt">
+              <span class="form-text text-danger" id="form-email-text"></span>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label><br>
+              <input type="tel" name="phone" placeholder="Enter your phone number" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="phone-inpt">
+              <span class="form-text text-danger" id="phone-form-text"></span>
+            </div>
+            <div class="mb-3">
+              <label for="course" class="form-label">Course</label><br>
+              <select required name="course" id="form-inpt" class="form-inpt rounded-1 border-2 p-1 w-100 border-opacity-25 border-dark">
+                <optgroup>
+                  <option value="full-stack-java">Full Stack Development - JAVA</option>
+                  <option value="full-stack-python">Full Stack Development - PYTHON</option>
+                  <option value="aws-with-devops">AWS with Devops</option>
+                </optgroup>
+              </select>
+            <span class="msg fs-6 text-primary" id="select-text"></span>
+            </div>
+            <div class="mb-3">
+              <button type="submit" name="myButton" class="btn bg-wisdom mt-3 text-center text-white ps-2 pe-2 fs-6">Send <i class="fa-brands fs-6 fa-telegram"></i></button>
+            </div>
+            <span class="msg fs-6 text-primary" id="msg"></span>
+          </form>
+        </div>
+      </div>
+    </div>
+      </div>
+
       <div class="container">
         <div class="title fs-4 mt-5 text-center fs-text-3 fw-bold text-wisdom">Planning for a Great start your Career with Wisdom Infotech?</div>
         <div class="caption fs-5 fs-text-4 text-center mt-2">Please enroll for the upcoming batches you’re comfortable with or else request a callback from us.</div>
@@ -67,8 +106,8 @@
         <table class="border">
           <tr class="border">
             <th class="p-2 bg-body-secondary text-center ">Course</th>
-            <th class="bg-body-secondary">Start Date</th>
             <th class="bg-body-secondary">Duration</th>
+            <th class="bg-body-secondary">Start Date</th>
             <th class="bg-body-secondary">Register</th>
           </tr>
           <tr class="border" >
@@ -93,10 +132,12 @@
           </div>
           <div class="col fs-text-3 mb-4">
             <div class="col fs-4 fs-text-3 text-white">Training Center</div>
-            <div class="col fs-text-4 fs-6 mt-2 text-white-50">Building No</div>
-            <div class="col fs-text-4 fs-6 mt-2 text-white-50">Line</div>
-            <div class="col fs-text-4 fs-6 mt-2 text-white-50">City, PINCODE</div>
-            <div class="col fs-text-4 fs-6 mt-2 text-white-50">Contact</div>
+            <div class="col fs-text-4 fs-6 mt-2 text-white-50">11/252/1/E,</div>
+            <div class="col fs-text-4 fs-6 mt-2 text-white-50">Flat No 302,</div>
+            <div class="col fs-text-4 fs-6 mt-2 text-white-50">Archana Apartments, Prakash Naga,</div>
+            <div class="col fs-text-4 fs-6 mt-2 text-white-50"></div>
+            <div class="col fs-text-4 fs-6 mt-2 text-white-50">Begumpet, Secundrabad-500016</div>
+
           </div>
           <div class="col mb-4">
             <div class="col fs-text-3 fs-4 text-white">Our Social Media</div>
@@ -214,7 +255,7 @@
             td1.innerHTML = courseName;
             td2.innerHTML = time;
             td3.innerHTML = data;
-            td4.innerHTML = '<button>Register</button>';
+            td4.innerHTML = '<button onclick="openForm()">Register</button>';
 
 
 
@@ -322,7 +363,13 @@
               
             // }
     
-          
+            function closeForm() {
+              document.getElementById("targetElement").style.display = "none";
+            }
+
+            function openForm() {
+              document.getElementById("targetElement").style.display = "block";
+            }
       
     
         

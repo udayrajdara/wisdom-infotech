@@ -21,7 +21,7 @@
 <body onload="load()">
 
 
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <nav class="z-index z-1 navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand  fw-medium" href="index.html"><img class="wisdom-logo" src="./Images/wisdom-logo.jpg" alt="WisdomInfotech"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,9 +31,6 @@
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link fs-6 fw-semibold" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-6 fw-semibold" href="about-us.html">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fs-6 fw-semibold" href="fullstack.html">Full Stack Development</a>
@@ -48,6 +45,48 @@
           </div>
         </div>
       </nav>
+
+      <div id="targetElement" class="container-xxl targetElement z-index z-2 fixed-top top-50 start-50 translate-middle">
+        <div>
+        <div class="d-flex justify-content-center">
+          <div class="form-container rounded-1 shadow-sm bg-body-tertiary border-wisdom border-1">
+          <div class="text-dark p-1 text-dark text-end"><i onclick="closeForm()" id="formPopup" class="cur-pot exit-icon p-2 bg-wisdom-50 rounded-5 text-white fa-solid fa-xmark"></i></div>
+          <form name="submit-to-google-sheet">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label><br>
+              <input type="text" name="name" placeholder="Enter your name" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="name-inpt">
+              <span class="form-text text-danger" id="name-form-text"></span>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label><br>
+              <input type="email" name="email" placeholder="Enter your email" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="email-inpt">
+              <span class="form-text text-danger" id="form-email-text"></span>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label><br>
+              <input type="tel" name="phone" placeholder="Enter your phone number" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="phone-inpt">
+              <span class="form-text text-danger" id="phone-form-text"></span>
+            </div>
+            <div class="mb-3">
+              <label for="course" class="form-label">Course</label><br>
+              <select required name="course" id="form-inpt" class="form-inpt rounded-1 border-2 p-1 w-100 border-opacity-25 border-dark">
+                <optgroup>
+                  <option value="full-stack-java">Full Stack Development - JAVA</option>
+                  <option value="full-stack-python">Full Stack Development - PYTHON</option>
+                  <option value="aws-with-devops">AWS with Devops</option>
+                </optgroup>
+              </select>
+            <span class="msg fs-6 text-primary" id="select-text"></span>
+            </div>
+            <div class="mb-3">
+              <button type="submit" name="myButton" class="btn bg-wisdom mt-3 text-center text-white ps-2 pe-2 fs-6">Send <i class="fa-brands fs-6 fa-telegram"></i></button>
+            </div>
+            <span class="msg fs-6 text-primary" id="msg"></span>
+          </form>
+        </div>
+      </div>
+    </div>
+      </div>
 
       <div class="hero-section">
         <div class="hyderabad-1 fs-4 p-2 text-center bg-wisdom text-white"># Your Future Starts Now</div>
@@ -317,7 +356,7 @@
         <div class="text-start fs-5 fw-semibold pt-3 pb-3 mb-3 blue">Talk To Our Certified Career Experts Today !</div>
       </div>
       <div class="container mb-5">
-        <button class="btn bg-blue fs-6 text-white rounded-1">Let's talk</button>
+        <button onclick="openForm()" class="btn bg-blue fs-6 text-white rounded-1">Let's talk</button>
 
       </div>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head onload="load()">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wisdom Infotech | Home</title>
@@ -18,8 +18,8 @@
     
     <script src="https://kit.fontawesome.com/fc2f6bf1f9.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg sticky-top">
+<body onload="load()">
+    <nav class="z-index z-1 navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand fw-medium" href="#"><img class="wisdom-logo" src="./Images/wisdom-logo.jpg" alt="WisdomInfotech"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,9 +29,6 @@
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link fs-6 fw-semibold active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-6 fw-semibold" href="about-us.html">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fs-6 fw-semibold" href="fullstack.html">Full Stack Development</a>
@@ -47,16 +44,77 @@
         </div>
       </nav>
 
-      <div class="page-hero">
+      <div class="position-relative page-hero">
         <div class="hero-matter d-flex ps-5 justify-content-start align-items-center align-content-center">
             <div class="hero-title text-white fw-bold ">
-              <span class="wisdom-title">Wisdon Infotech</span><br>
-              <span class="wisdom-caption">Hyderabad’s Most Favorite Training Center For Full Stack  and AWS+Devops</span><br>
-              <button class="btn mt-3 bg-primary fw-semibold fs-6 text-white rounded-1">Enroll Now</button>
+              <span class="wisdom-title">Wisdom Infotech</span><br>
+              <span class="fs-4 word-break-10">Innovate | Connect | Inspire</span><br>
+              <button onclick="openForm()" class="btn mt-3 bg-primary fw-semibold fs-6 text-white rounded-1">Enroll Now</button>
             </div>
         </div>
       </div>
 
+      <div id="targetElement" class="container-xxl targetElement z-index z-2 fixed-top top-50 start-50 translate-middle">
+        <div>
+        <div class="d-flex justify-content-center">
+          <div class="form-container rounded-1 shadow-sm bg-body-tertiary border-wisdom border-1">
+          <div class="text-dark p-1 text-dark text-end"><i onclick="closeForm()" id="formPopup" class="cur-pot exit-icon p-2 bg-wisdom-50 rounded-5 text-white fa-solid fa-xmark"></i></div>
+          <form name="submit-to-google-sheet">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label><br>
+              <input type="text" name="name" placeholder="Enter your name" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="name-inpt">
+              <span class="form-text text-danger" id="name-form-text"></span>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label><br>
+              <input type="email" name="email" placeholder="Enter your email" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="email-inpt">
+              <span class="form-text text-danger" id="form-email-text"></span>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label><br>
+              <input type="tel" name="phone" placeholder="Enter your phone number" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="phone-inpt">
+              <span class="form-text text-danger" id="phone-form-text"></span>
+            </div>
+            <div class="mb-3">
+              <label for="course" class="form-label">Course</label><br>
+              <select required name="course" id="form-inpt" class="form-inpt rounded-1 border-2 p-1 w-100 border-opacity-25 border-dark">
+                <optgroup>
+                  <option value="full-stack-java">Full Stack Development - JAVA</option>
+                  <option value="full-stack-python">Full Stack Development - PYTHON</option>
+                  <option value="aws-with-devops">AWS with Devops</option>
+                </optgroup>
+              </select>
+            <span class="msg fs-6 text-primary" id="select-text"></span>
+            </div>
+            <div class="mb-3">
+              <button type="submit" name="myButton" class="btn bg-wisdom mt-3 text-center text-white ps-2 pe-2 fs-6">Send <i class="fa-brands fs-6 fa-telegram"></i></button>
+            </div>
+            <span class="msg fs-6 text-primary" id="msg"></span>
+          </form>
+        </div>
+      </div>
+    </div>
+      </div>
+
+
+      <div class="container">
+        <div class="fs-3 fw-bolder text-center mt-5 text-wisdom">Hyderabad’s Most Favorite Training Center For Full Stack  and AWS+Devops</div>
+        <div class="row">
+          <div class="col text-dark">
+            <ul>
+              <li class="fs-6 mt-1 ms-5 fs-text-4">Certified Trainers with Min 7+ Years Real Industry Experience</li>
+              <li class="fs-6 mt-1 ms-5 fs-text-4">Best Faculty with Excellent Lab Infrastructure</li>
+              <li class="fs-6 mt-1 ms-5 fs-text-4">Dedicated HR Team for Job Placements</li>
+              <li class="fs-6 mt-1 ms-5 fs-text-4">24/7 Online Portal for Learning & Practising Real Time Subject</li>
+              <li class="fs-6 mt-1 ms-5 fs-text-4">We Prepare your CV/Resume to attend Interviews and Securing a Job</li>
+              <li class="fs-6 mt-1 ms-5 fs-text-4">Trained Over 15000+ Professionals in Digital Marketing, Data Science, Full Stack Development, AWS + DevOps, & Artificial Intelligence with Real Time Projects</li>
+              <li class="fs-6 mt-1 ms-5 fs-text-4">One-to-One Attention by Instructors</li>
+              <li class="fs-6 mt-1 ms-5 fs-text-4">Classes with 30% Theory & 70% Hands-On</li>
+              <li class="fs-6 mt-1 ms-5 fs-text-4">All Day Mentors available for Doubt Sessions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <div class="container d-flex justify-content-center mt-5">
         <div class="row p-2 text-center">

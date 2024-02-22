@@ -485,9 +485,9 @@ a img{
     color: #1778B0;
 }
 
-.bg-blue{
-    background-color: #1778B0;
-}
+  .bg-blue{
+      background-color: #1778B0;
+  }
 
 .bg-blue:hover{
     background-color: #1778B0;
@@ -661,4 +661,29 @@ a img{
         padding: 5px;
     
       }
+  }
+
+  .word-break-10{
+    word-spacing: 10px;
+  }
+  .word-break-20{
+    word-spacing: 20px;
+  }
+  .word-break-30{
+    word-spacing: 30px;
+  }
+  .word-break-40{
+    word-spacing: 40px;
+  }
+
+  .active-form{
+    display: inherit;
+  }
+
+  .cur-pot{
+    cursor: pointer;
+  }
+
+  .targetElement{
+    display: none;
   }
