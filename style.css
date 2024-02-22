@@ -678,6 +678,8 @@ a img{
 
   .active-form{
     display: inherit;
+    background-color: rgba(0,0,0,0.4);
+    padding: 1.2rem;
   }
 
   .cur-pot{
@@ -686,4 +688,6 @@ a img{
 
   .targetElement{
     display: none;
+    background-color: rgba(0,0,0,0.4);
+    padding: 1.2rem;
   }
