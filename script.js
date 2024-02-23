@@ -46,7 +46,7 @@ const load = () => {
 
 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxwwHxK-_15eqdyk6kz5MJs6LzaDCaTqVfWdVnWJmmFROsOwMOmgLdzpjOUqYsp26y7-A/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyPQgRvTfIq8zM9VakoU7cRJNGcGSTudsHtTZH76TyMm5ioE3pCexdbtl6Xy7ls0bcG/exec';
 const form = document.forms['submit-to-google-sheet'];
 var msg = document.getElementById('msg');
 
@@ -178,3 +178,9 @@ function closeForm() {
 function openForm() {
    document.getElementById("targetElement").style.display = "block";
 }
+
+
+
+
+
+

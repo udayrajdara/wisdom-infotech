@@ -199,37 +199,37 @@
           <div class="fs-4 fw-semibold fs-text-4 text-dark text-center mb-4">Register for the Webinar</div>
         <div class="d-flex mb-5 justify-content-center">
           <div class="form-container rounded-1 shadow-sm bg-body-tertiary border border-1">
-          <form name="submit-to-google-sheet">
+          <form name="submit-to-google-sheet-form">
             <div class="mb-3">
               <label for="name" class="form-label">Name</label><br>
-              <input type="text" name="name" placeholder="Enter your name" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="name-inpt">
-              <span class="form-text text-danger" id="name-form-text"></span>
+              <input type="text" name="name" placeholder="Enter your name" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="name-inpt-form">
+              <span class="form-text text-danger" id="name-form-text-form"></span>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email Address</label><br>
-              <input type="email" name="email" placeholder="Enter your email" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="email-inpt">
-              <span class="form-text text-danger" id="form-email-text"></span>
+              <input type="email" name="email" placeholder="Enter your email" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="email-inpt-form">
+              <span class="form-text text-danger" id="form-email-text-form"></span>
             </div>
             <div class="mb-3">
               <label for="phone" class="form-label">Phone Number</label><br>
-              <input type="tel" name="phone" placeholder="Enter your phone number" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="phone-inpt">
-              <span class="form-text text-danger" id="phone-form-text"></span>
+              <input type="tel" name="phone" placeholder="Enter your phone number" class="rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100" id="phone-inpt-form">
+              <span class="form-text text-danger" id="phone-form-text-form"></span>
             </div>
             <div class="mb-3">
               <label for="course" class="form-label">Course</label><br>
-              <select name="course" id="form-inpt" class="form-inpt rounded-1 border-2 p-1 w-100 border-opacity-25 border-dark">
+              <select name="course" id="form-inpt-form" class="form-inpt rounded-1 border-2 p-1 w-100 border-opacity-25 border-dark">
                 <optgroup>
                   <option value="full-stack-java">Full Stack Development - JAVA</option>
                   <option value="full-stack-python">Full Stack Development - PYTHON</option>
                   <option value="aws-with-devops">AWS with Devops</option>
                 </optgroup>
               </select>
-            <span class="msg fs-6 text-primary" id="select-text"></span>
+            <span class="msg fs-6 text-primary" id="select-text-form"></span>
             </div>
             <div class="mb-3">
-              <button type="submit" name="myButton" class="btn bg-primary mt-3 text-center text-white ps-2 pe-2 fs-6">Send <i class="fa-brands fs-6 fa-telegram"></i></button>
+              <button type="submit" name="myButton-btn" class="btn bg-primary mt-3 text-center text-white ps-2 pe-2 fs-6">Send <i class="fa-brands fs-6 fa-telegram"></i></button>
             </div>
-            <span class="msg fs-6 text-primary" id="msg"></span>
+            <span class="msg fs-6 text-primary" id="msgs"></span>
           </form>
         </div>
       </div>
@@ -409,5 +409,7 @@
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
       <script src="./script.js"></script>
+      <script src="scripts.js"></script>
+
 </body>
 </html>
