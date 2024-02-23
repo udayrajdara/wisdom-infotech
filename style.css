@@ -270,11 +270,6 @@ a img{
 }
 
 
-
-
-
-
-
   @media (max-width: 1000px) {
     .jobs-image{
         width: 100%;
@@ -331,7 +326,7 @@ a img{
 
   @media (max-width: 500px) {
     .images img{
-        width: 100%;
+      width: 100% !important;
     }
     td, th{
         font-size: 15px;
@@ -375,7 +370,7 @@ a img{
     }
 
     .fs-text{
-        font-size: 13px !important;
+        font-size: 12px !important;
       }
 
       .fs-text-3{
@@ -408,7 +403,9 @@ a img{
       .form-inpt{
         padding: 0;
       }
-
+      .images img{
+        width: 120% !important;
+      }
 
       .page-hero{
         width: 100%;
@@ -710,11 +707,15 @@ a img{
 
   @media (max-width:500px) {
     .active-form{
+      width: 100%;
+      height: auto;
       display: inherit;
       margin: auto;
       padding: 1.2rem;
     }
     .targetElement{
+      width: 100%;
+      height: auto;
       display: none;
       margin: auto;
       padding: 1.2rem;
