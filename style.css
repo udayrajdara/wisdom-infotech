@@ -465,6 +465,10 @@ a img{
     background-color: #2F3974;
   }
 
+  .bg-wisdom-linear{
+    background: linear-gradient(to top right ,#1778B0,#2F3974);
+  }
+
   .bg-wisdom::after{
     opacity: 1;
     background-color: #2F3974;
@@ -721,13 +725,6 @@ a img{
       margin: auto;
       background-color: transparent;
       padding: 1.2rem;
-    }
-    .middle{
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin: auto;
     }
   }
 

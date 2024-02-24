@@ -57,7 +57,7 @@
       <div id="targetElement" class="container-xxl targetElement z-index z-2 fixed-top top-50 start-50 translate-middle">
         <div>
         <div class="d-flex justify-content-center">
-          <div class="form-container text-white bg-primary rounded-1 shadow-sm border-wisdom border-1">
+          <div class="form-container text-white bg-wisdom-linear rounded-1 shadow-sm border-wisdom border-1">
           <div class="text-dark p-1 text-white text-end"><i onclick="closeForm()" id="formPopup" class="cur-pot exit-icon p-2 bg-white rounded-5 text-dark fa-solid fa-xmark"></i></div>
           <form name="submit-to-google-sheet">
             <div class="mb-3">
@@ -118,6 +118,11 @@
             
           </tr>
         </table>
+      </div>
+
+      <div class="container mb-5">
+        <div class="text-start fs-5 fw-semibold pt-3 pb-3 mb-3 text-wisdom">Talk To Our Certified Career Experts Today !</div>
+        <a href="tel:+919550063704" class="btn bg-wisdom fs-6 text-white rounded-1">Let's talk</a>
       </div>
 
       <div class="container-fluid bg-wisdom bg-wisdom p-3">
@@ -327,41 +332,6 @@
           window.onload = getAllData;
 
 
-
-
-
-          // window.addEventListener('load', function getData(){
-        
-          //   var usRef = ref(database, 'index/');
-
-          //   get(usRef).then((snapshot)=>{
-
-          //     var list = []
-
-          //     snapshot.forEach((childsnapshot)=>{
-          //       list.push(childsnapshot.key, childsnapshot.val())
-                
-          //     })
-
-          //     addList(list)
-
-          //   })
-
-
-          
-
-          //   })
-                
-    
-            // function addList(theList){
-            //   listNo = 0;
-
-            //   nameLi.innerHTML = "";
-            //   theList.forEach(element =>{
-            //     addList
-            //   })
-              
-            // }
     
             function closeForm() {
               document.getElementById("targetElement").style.display = "none";
@@ -379,6 +349,7 @@
         
         </script>
 
-      <script src="./script.js"></script>
+<script src="./script.js"></script>
+
 </body>
 </html>

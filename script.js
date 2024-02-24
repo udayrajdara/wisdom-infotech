@@ -28,13 +28,10 @@ function animate(obj, initVal, lastVal, duration) {
  //start animating
     window.requestAnimationFrame(step);
  }
-
-
 let text1 = document.getElementById('0101');
 let text2 = document.getElementById('0102');
 let text3 = document.getElementById('0103');
 let text4 = document.getElementById('0104');
-
 const load = () => {
    animate(text1, 0, 150000, 7000);
    animate(text2, 0, 15000, 7000);
@@ -76,6 +73,7 @@ form.addEventListener('submit', e => {
       emailinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
       phoneText.innerHTML = "";
       phoneinput.className = "rounded-1 border-2 border-opacity-25 border-dark ps-2 p-1 form-inpt w-100";
+      console.log("form1")
       return false
 
    }else if(emailInpt === null || emailInpt == ''){
@@ -178,6 +176,11 @@ function closeForm() {
 function openForm() {
    document.getElementById("targetElement").style.display = "block";
 }
+
+
+
+
+
 
 
 
