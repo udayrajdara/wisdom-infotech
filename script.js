@@ -1,3 +1,18 @@
+window.addEventListener('load', function() {
+   // Code to execute after the page loads
+   setInterval(function() {
+       // Get the element you want to change the class of
+       var element = document.getElementById('targetElement');
+       
+       // Toggle class names
+       if (element.classList.contains('targetElement')) {
+           element.classList.remove('targetElement');
+           element.classList.add('active-form');
+       } 
+   }, 3000); // Interval time in milliseconds (1000 ms = 1 second)
+});
+
+
 function animate(obj, initVal, lastVal, duration) {
     let startTime = null;
 
@@ -27,6 +42,8 @@ function animate(obj, initVal, lastVal, duration) {
  };
  //start animating
     window.requestAnimationFrame(step);
+
+    
  }
 let text1 = document.getElementById('0101');
 let text2 = document.getElementById('0102');
@@ -142,29 +159,8 @@ form.addEventListener('submit', e => {
 })
 
 
-// var active = document.getElementById('active-btn');
-
-// const setInterval = (()=>{
-
-//       active.className.add('active-form z-index z-2 fixed-top top-50 start-50 translate-middle')
-//       console.log('done')
-
-// }, 1000)
 
 
-window.onload = function() {
-   // Code to execute after the page loads
-   setInterval(function() {
-       // Get the element you want to change the class of
-       var element = document.getElementById('targetElement');
-       
-       // Toggle class names
-       if (element.classList.contains('targetElement')) {
-           element.classList.remove('targetElement');
-           element.classList.add('active-form');
-       } 
-   }, 3000); // Interval time in milliseconds (1000 ms = 1 second)
-};
 
 
 
