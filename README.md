@@ -53,9 +53,19 @@ The project demonstrates my ability to build complete frontend solutions, includ
 * Admin Panel Development
 
 
-## 📸 Preview
+## 📸 Project Gallery
 
-Add project screenshots here.
+<p align="center">
+  <img src="https://github.com/udayrajdara/wisdom-infotech/blob/master/wisdom%20ss%201.png?raw=true" width="48%" alt="Homepage">
+  <img src="https://github.com/udayrajdara/wisdom-infotech/blob/master/wisdom%20ss%202.png?raw=true" width="48%" alt="Courses">
+</p>
+
+<p align="center">
+  <img src="https://github.com/udayrajdara/wisdom-infotech/blob/master/wisdom%20ss%203.png?raw=true" width="48%" alt="Dashboard">
+  <img src="https://github.com/udayrajdara/wisdom-infotech/blob/master/wisdom%20ss%204.png?raw=true" width="48%" alt="Mobile View">
+</p>
+
+
 
 ## ⚙️ Getting Started
 
